@@ -25,14 +25,12 @@ SOFTWARE.
 
 import requests
 
+url = "https://deckofcardsapi.com/api/deck/m76yqbycubnj/draw/?count=6"
 
-url = "https://deckofcardsapi.com/api/deck/new/shuffle/"
-querystring = {"deck_count": "6"}
-headers = {
-   'Cache-Control': "no-cache",
-   'Postman-Token': "dd1d8ca5-7000-21b2-2230-39969d585419"
-   }
-response = requests.request("GET", url, headers=headers, params=querystring)
+payload={}
+headers = {}
+
+response = requests.request("GET", url, headers=headers, data=payload)
 
 print(response.text)
-# Get the deck_id from the returned JSON 
+
